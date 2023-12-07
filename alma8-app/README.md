@@ -44,5 +44,7 @@ if __name__ == "__main__":
 export FLASK_APP=hello.py
 flask run
 
+http://34.41.148.216:5000/hello
+
 
 ```
