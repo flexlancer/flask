@@ -1,4 +1,21 @@
 ###### Reference
+
+###### https://computingforgeeks.com/install-flask-gunicorn-on-rocky-almalinux/
+```
+sudo dnf -y install epel-release
+sudo dnf install nginx -y
+
+sudo su -
+mkdir /myproject && cd /myproject
+pip3 install flask
+pip3 intall gunicorn
+
+sudo firewall-cmd --add-port=5000/tcp --permanent
+sudo firewall-cmd --reload
+```
+
+
+
 ###### https://www.geeksforgeeks.org/python-introduction-to-web-development-using-flask/?ref=lbp
 ```
 sudo pip3 install flask_sslify
@@ -41,10 +58,12 @@ def show_post(year):
 if __name__ == "__main__":
   app.run()
 
+
+sudo firewall-cmd --add-port=5000/tcp --permanent
+sudo firewall-cmd --reload
+
 export FLASK_APP=hello.py
 flask run
 
 http://34.41.148.216:5000/hello
-
-
 ```
